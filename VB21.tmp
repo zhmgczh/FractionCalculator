@@ -1,0 +1,194 @@
+VERSION 5.00
+Begin VB.Form Form1 
+   Caption         =   "分数计算器"
+   ClientHeight    =   4515
+   ClientLeft      =   60
+   ClientTop       =   450
+   ClientWidth     =   6735
+   LinkTopic       =   "Form1"
+   ScaleHeight     =   4515
+   ScaleWidth      =   6735
+   StartUpPosition =   2  '屏幕中心
+   Begin VB.TextBox Text6 
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   12
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   2400
+      TabIndex        =   10
+      Top             =   3240
+      Width           =   1815
+   End
+   Begin VB.TextBox Text5 
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   12
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   2400
+      TabIndex        =   9
+      Top             =   2640
+      Width           =   1815
+   End
+   Begin VB.TextBox Text4 
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   12
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   4200
+      TabIndex        =   7
+      Top             =   1680
+      Width           =   1695
+   End
+   Begin VB.TextBox Text3 
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   12
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   4200
+      TabIndex        =   6
+      Top             =   1080
+      Width           =   1695
+   End
+   Begin VB.CommandButton Command4 
+      Caption         =   "/"
+      Height          =   375
+      Left            =   3360
+      TabIndex        =   5
+      Top             =   1680
+      Width           =   375
+   End
+   Begin VB.CommandButton Command3 
+      Caption         =   "-"
+      Height          =   375
+      Left            =   3360
+      TabIndex        =   4
+      Top             =   1080
+      Width           =   375
+   End
+   Begin VB.CommandButton Command2 
+      Caption         =   "*"
+      Height          =   375
+      Left            =   2880
+      TabIndex        =   3
+      Top             =   1680
+      Width           =   375
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "+"
+      Height          =   375
+      Left            =   2880
+      TabIndex        =   2
+      Top             =   1080
+      Width           =   375
+   End
+   Begin VB.TextBox Text2 
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   12
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   720
+      TabIndex        =   1
+      Top             =   1680
+      Width           =   1695
+   End
+   Begin VB.TextBox Text1 
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   12
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   720
+      TabIndex        =   0
+      Top             =   1080
+      Width           =   1695
+   End
+   Begin VB.Line Line3 
+      X1              =   2160
+      X2              =   4320
+      Y1              =   3120
+      Y2              =   3120
+   End
+   Begin VB.Label Label1 
+      Caption         =   "="
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   21.75
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   3120
+      TabIndex        =   8
+      Top             =   2160
+      Width           =   255
+   End
+   Begin VB.Line Line2 
+      X1              =   4080
+      X2              =   6000
+      Y1              =   1560
+      Y2              =   1560
+   End
+   Begin VB.Line Line1 
+      X1              =   600
+      X2              =   2520
+      Y1              =   1560
+      Y2              =   1560
+   End
+End
+Attribute VB_Name = "Form1"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Private Sub Command1_Click()
+fm = Text2.Text * Text4.Text
+Text6.Text = fm
+fz1 = Text1.Text * Text4.Text
+fz2 = Text3.Text * Text2.Text
+Text5.Text = Val(fz1) + Val(fz2)
+End Sub
+Private Sub Command3_Click()
+fm = Text2.Text * Text4.Text
+Text6.Text = fm
+fz1 = Text1.Text * Text4.Text
+fz2 = Text3.Text * Text2.Text
+Text5.Text = Val(fz1) - Val(fz2)
+End Sub
